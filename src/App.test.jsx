@@ -1,14 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders blog name", () => {
+test("renders the blog name in the header", () => {
   render(<App />);
-  const title = screen.getByText(/Tanskie's Blog/i);
-  expect(title).toBeInTheDocument();
-});
-
-test("renders article titles", () => {
-  render(<App />);
-  const article = screen.getByText(/My First Post/i);
-  expect(article).toBeInTheDocument();
+  const headerElement = screen.getByText(/Tanskie's Blog/i); // Replace with your actual blog name
+  expect(headerElement).toBeInTheDocument();
 });

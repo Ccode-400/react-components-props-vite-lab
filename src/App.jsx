@@ -1,17 +1,19 @@
-import Header from "./components/Header";
-import About from "./components/About";
-import ArticleList from "./components/ArticleList";
-import blog from "./data/blog";
-
+import blogData from "./data/blog";
+import Header from "./Header";
+import About from "./About";
+import ArticleList from "./ArticleList";
 function App() {
   return (
-    <div>
-      {/* Passing props down */}
-      <Header name={blog.name} />
-      <About image={blog.image} about={blog.about} />
-      <ArticleList posts={blog.posts} />
+    <div className="App">
+      <Header name={blogData.name} />
+      <About image={blogData.image} about={blogData.about} />
+      <ArticleList posts={blogData.posts} />
     </div>
   );
 }
 
 export default App;
+
+//import Header from "./Header";
+//import About from "./About";
+//import ArticleList from "./ArticleList";
