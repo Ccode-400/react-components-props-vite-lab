@@ -3,3 +3,14 @@ import About from "./components/About";
 import ArticleList from "./components/ArticleList";
 import blog from "./data/blog";
 
+function App() {
+  return (
+    <div>
+      {/* Passing props down */}
+      <Header name={blog.name} />
+      <About image={blog.image} about={blog.about} />
+      <ArticleList posts={blog.posts} />
+    </div>
+  );
+}
+
