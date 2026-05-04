@@ -7,3 +7,8 @@ test("renders blog name", () => {
   expect(title).toBeInTheDocument();
 });
 
+test("renders article titles", () => {
+  render(<App />);
+  const article = screen.getByText(/My First Post/i);
+  expect(article).toBeInTheDocument();
+});
